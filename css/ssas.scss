@@ -1,0 +1,205 @@
+@keyframes ani-down-up{
+  50%{top:10px}
+}
+@keyframes ani-down-up-rev{
+  50%{top:-10px}
+}
+
+@font-face{
+  font-family: 'Laptev_Brush';
+  src: url('laptev/Laptev_Brush.otf');
+}
+@font-face {
+  font-family: 'fairy';
+  src: url('FairyMuffinRoundPop/Fairymuffinroundpop.ttf');
+}
+
+@media (max-width: 1214px){#body{.grid-nine{grid-template-columns: repeat(11, 1fr); .button:first-child{display: none} .button:last-child{display: none}}}}
+@media (max-width: 1072px){#body{.grid-nine{grid-template-columns: repeat(9, 1fr); .button:nth-child(2){display: none} .button:nth-last-child(2){display: none}}}}
+@media (max-width: 1106px){#body{.Noti_menu{grid-template-columns: repeat(10, 1fr);div{font-size:1.9vw}}}}
+@media (max-width: 932px){
+  #body{
+    main{font-size: 3vw} .I_want_to_tall{font-size: 2.3vw}
+    .hole, .lesses{width: 30%} .idia{width: 35%;}
+  }
+}
+@media (max-width: 888px){#body{.grid-nine{grid-template-columns: repeat(7, 1fr); .button:nth-child(3){display: none} .button:nth-last-child(3){display: none}}}}
+@media (max-width: 854px){
+  #body{
+    .Noti_menu{grid-template-columns: repeat(8, 1fr);div{font-size:2.5vw}}
+    .razd_line{padding-bottom: 15px; a{display: none} .littl_wind{display: block}}
+  }
+}
+@media (max-width: 715px){
+  #body{
+    .Noti_menu{grid-template-columns: repeat(6, 1fr);div{font-size:3vw}}
+    .grid-nine{grid-template-columns: repeat(5, 1fr); .button:nth-child(4){display: none} .button:nth-last-child(4){display: none}}
+  }
+}
+@media (max-width: 634px){#body{footer{grid-template-columns: repeat(3, 1fr); grid-column-gap: 0;a{margin-right: 10px}}}}
+@media (max-width: 567px){
+  #body{
+    main{font-size: 4.5vw} .I_want_to_tall{font-size: 3.5vw}
+    .hole, .idia{width: 55%} .lesses{display: none}
+  }
+}
+@media (max-width: 540px){
+  #body{
+    #spisok_razd{grid-template-columns: repeat(4, 1fr)}
+    .Noti_menu{grid-template-columns: repeat(4, 1fr);div{font-size:4vw}}
+    .grid-nine{grid-template-columns: repeat(4, 1fr); .button:nth-last-child(5){display: none}}
+  }
+}
+
+@media (max-device-width: 480px){
+  #body{
+    footer{grid-template-columns: repeat(4, 1fr); img{width: 200px}}
+    header{
+      grid-template-columns: repeat(4, 1fr);
+      img{grid-column: 1/3; width: 200px}
+      .Notification{width: 60px; height: 60px; font-size: 40pt; margin-left: 80px}
+      .lk{height:140px; font-size: 95pt}
+    }
+    .Noti_menu{div{height:460px; margin-bottom: 30px; font-size: 5vw;} grid-template-columns: repeat(4, 1fr); height: 500px}
+    .button{height: 150px; width: 150px;}
+    main{font-size: 4.5vw}
+    .grid-nine{
+      height: 150px;
+      grid-template-columns: repeat(4, 1fr); .button:first-child{display: none} .button:last-child{display: none} .button:nth-child(2){display: none} .button:nth-last-child(2){display: none}
+      .button:nth-child(3){display: none} .button:nth-last-child(3){display: none} .button:nth-child(4){display: none} .button:nth-last-child(4){display: none} .button:nth-last-child(5){display: none}
+    }
+    .I_want_to_tall{font-size: 2vw}
+    .hole, .idia{width: 100%; margin-bottom: 20px} .lesses{display: none}
+    .razd_line{height: 150px; padding-bottom: 15px; a{display: none} .littl_wind{display: block}}
+  }
+}
+
+$blue: #69a7a7;
+$orange: #C2A388;
+$light-blue: #e2fbff;
+$light-orange: #f2dfcf;
+$dark-blue: #1b4a4b;
+$dark-orange: #83664c;
+
+body{
+  margin: 0;
+  font-family: 'Laptev_Brush';
+  font-weight: 30pt;
+}
+.grid_blocks{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-column-gap: 20px;
+}
+
+header{
+  background-color: $light-orange;
+  img{grid-column: 1/11;}
+  .button{box-shadow: -4px 4px 10px 0px $dark-orange; margin-top:15px;}
+  .button:hover{box-shadow: inset -2px 4px 5px 0px #ffffff, -4px 4px 10px 0px $dark-orange;}
+  .lk{height:60px; font-size: 40pt}
+}
+
+footer{
+  background-color: $dark-orange;
+  img{grid-column: 12/13;}
+  .button{box-shadow: -4px 4px 10px 0px $light-orange;margin-top:20px;}
+  .button:hover{box-shadow: inset -2px 4px 5px 0px #ffffff, -4px 4px 10px 0px $light-orange;}
+}
+
+.Noti_menu{
+  height: 220px;
+  background: linear-gradient(to right, #c0a388 20%, #f2dfcf 80%);
+  border-bottom: 2px solid $dark-orange;
+  z-Index: 1;
+  position: absolute;
+  overflow-x: auto;
+  transition-duration: 0.5s;
+  transform-origin:top;
+  div{
+    grid-column-end: span 2;
+    font-size: 1.5vw;
+    font-family: 'Laptev_Brush';
+    border: 2px solid $dark-orange;
+    border-radius: 5px;
+    height: 200px;
+    box-shadow: -4px 4px 10px 0px $dark-orange;
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+}
+.razd_line{background: linear-gradient(to right, #c0a388 20%, #f2dfcf 80%); display: grid; grid-template-columns: repeat(12, 1fr); padding-left: 50px; padding-right: 50px; grid-column-gap: 20px; justify-items: center; padding-top: 20px; height: 70px;
+  a{grid-column: span 4; font-family:'fairy'; text-decoration: none; font-size: 30pt; color: $dark-orange;} a:hover{text-shadow: 2px 5px 4px $dark-blue;}
+}
+
+main{
+  background: radial-gradient(at top, #FEFFFF, #daf5ff);
+  font-size: 2vw;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  color: $dark-blue;
+}
+
+.grid-nine{
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-column-gap: 20px;
+  background-color: $blue;
+  border-radius:30px;
+  margin-bottom: 20px;
+  justify-items: center;
+  .button:hover{z-index: 1;}
+}
+
+.I_want_to_tall{
+  font-family: 'fairy';
+  grid-column:1/11;
+  margin-bottom:10px;
+  font-size: 1.6vw;
+}
+
+.button{
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  background-color: $dark-blue;
+  background-size: cover;
+  font-family: "fairy";
+  color: $light-blue;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover{
+  box-shadow: inset -2px 4px 5px 0px #ffffff;
+}
+
+.littl_wind{display: none;}
+.littl_wind:hover{box-shadow: -2px 4px 2px 0px $dark-blue}
+
+.Notification{ /*пришедшее уведомление*/
+  font-family: 'Laptev_Brush';
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  width: 18px;
+  height: 18px;
+  background-color: $dark-blue;
+  margin-left: 43px;
+  margin-top: 10px;
+  box-shadow: -4px 4px 10px 0px $dark-orange;
+}
+
+.main-im{
+  border-radius: 20px;
+  margin: 0;
+}
+.hole{width: 20%;}
+.lesses{margin-right:4%; width: 15%;}
+.idia{width: 28%;}
+
+hr{height: 4px; background-color: #83664c;}

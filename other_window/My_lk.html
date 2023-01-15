@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/other_ssas.css">
+    <title>Личный кабинет</title>
+  </head>
+  <body id='body'>
+    <header class='grid_blocks'>
+      <img class='sist_i' src="../sistem_image/logo_head.jpg" alt="logo" width="120">
+      <div class="button" onclick="noti_menu(event)" style="background-color: #C2A388; background-image: url('../sistem_image/Bell.png')"><a class="Notification" style='display: block'></a></div>
+      <a class="button lk" href="My_lk.html" style="padding-top:10px;">Ю</a>
+    </header>
+    <div class='false_line'></div>
+    <div class="grid_blocks Noti_menu" style='visibility: hidden; transform: scaleY(0.000001);'>
+      <div>В этом обновлении вам добавились все возможности по направлению: "Графика"</div>
+      <div>В этом обновлении вам добавилась "Лисья нора" по направлению: "Вышивание"</div>
+    </div>
+
+    <main>
+      <div class="left-line">
+        <a href="../index.html"><div class="button" style="background-image: url('../sistem_image/logo_foot.jpg')"></div><p>Главное меню</p></a>
+        <a href="foxs hole-obzore.html"><div class="button" style="background-image: url('../sistem_image/fox_hole_but.png')"></div><p>Лисья нора</p></a>
+        <a href="lessons.html"><div class="button" style="background-image: url('../sistem_image/less2_but.png')"></div><p>Уроки</p></a>
+        <a href="I want to will have new idea.html"><div class="button" style="background-image: url('../sistem_image/rand_but.png')"></div><p>Ищу идею</p></a>
+      </div>
+      <div class="work_zone">
+        <div class="blok_ld"><div class='name'>Юлька</div><div class='regestration'>Дата регистрации: 21.05.2022</div></div>
+        <a class='lk_a' style="color:#83664c;">Избранное</a>
+        <a class='lk_a'>из раздела Графика:</a>
+        <div class="lovers"></div>
+        <a class='lk_a'>из раздела Вышивка:</a>
+        <div class="lovers">
+          <div class='img_pst' style="background-image: url('../image/Embroidery/S3n7gJxD9Kt3U6pGjKvU_1KlciRLBLYVBXCYrXBgoymr813tSECh7e_YvTpSRCH1Y5f0zZZbhj9jqtB0YD5elpKG.jpg');"><img src="../image/Embroidery/S3n7gJxD9Kt3U6pGjKvU_1KlciRLBLYVBXCYrXBgoymr813tSECh7e_YvTpSRCH1Y5f0zZZbhj9jqtB0YD5elpKG.jpg"></div>
+          <div class='img_pst' style="background-image: url('../image/Embroidery/917EXbtFLRA6zmqupmOC6A5de-5oTgLmH2f7Rpy9pW-DCzGats4UYUW-d-YVuS_sH9mF5nJup3-aQMMsKyE_5zf_.jpg');"><img src="../image/Embroidery/917EXbtFLRA6zmqupmOC6A5de-5oTgLmH2f7Rpy9pW-DCzGats4UYUW-d-YVuS_sH9mF5nJup3-aQMMsKyE_5zf_.jpg"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="grid_blocks">
+      <a class="button" style="background-image: url('../sistem_image/VK.png')" href="https://vk.com/public164057070"></a>
+      <a class="button" style="background-image: url('../sistem_image/you.png')" href="https://www.youtube.com/channel/UCM-0ikAGd_lXMmQkl4qFVjw"></a>
+      <img class='sist_i' src="../sistem_image/logo_foot.jpg" alt="logo" width="120">
+    </footer>
+    <script>
+
+      var schet=0
+      body.getElementsByTagName('header')[0].children[1].getElementsByClassName('Notification')[0].textContent = body.getElementsByClassName('Noti_menu')[0].children.length
+
+      for(let i=2; i<body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children.length; i++){
+        if (body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i].className=='lovers')
+          if (body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i].children.length==0){
+            body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i-1].style.display='none'
+            body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i].style.display='none'
+            schet=schet+2
+          }
+      }
+      for(let i=body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children.length-1; i>2; i--){
+        if((body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i].children.length>0)&&(schet!=0)){
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i].style.marginBottom=window.screen.height+100+'px'
+          else body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[i].style.marginBottom='600px'
+        }
+      }
+      if (body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children.length-2==schet){
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[1].style.marginBottom=window.screen.height+500+'px'
+        else body.getElementsByTagName('main')[0].getElementsByClassName('work_zone')[0].children[1].style.marginBottom='800px'
+      }
+
+      function noti_menu(event){
+        var tar=event.target.parentElement.parentElement.parentElement
+        var tar_child=tar.getElementsByClassName('Noti_menu')[0]
+
+        if (tar_child.style.visibility!='hidden'){
+          tar_child.style.transform='scaleY(0.000001)'
+          tar_child.style.visibility='hidden'
+          event.target.getElementsByClassName('Notification')[0].style.display='none'
+        }
+        else{
+          tar_child.style.visibility='visible'
+          tar_child.style.transform='scaleY(1)'
+        }
+      }
+
+    </script>
+  </body>
+</html>

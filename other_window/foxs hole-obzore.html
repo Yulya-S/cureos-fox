@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/other_ssas.css">
+    <title>Лисья нора</title>
+  </head>
+  <body id="body" onclick="funcInBody(event)" onload="gallery.scrollTo(0,gallery.scrollHeight)">
+    <header class='grid_blocks'>
+      <img class='sist_i' src="../sistem_image/logo_head.jpg" alt="logo" width="120">
+      <div class="button" onclick="noti_menu(event)" style="background-color: #C2A388; background-image: url('../sistem_image/Bell.png')"><a class="Notification" style='display: block'></a></div>
+      <a class="button lk" href="My_lk.html" style="padding-top:10px;">Ю</a>
+    </header>
+    <div class='false_line'></div>
+    <div class="grid_blocks Noti_menu" style='visibility: hidden; transform: scaleY(0.000001);'>
+      <div>В этом обновлении вам добавились все возможности по направлению: "Графика"</div>
+      <div>В этом обновлении вам добавилась "Лисья нора" по направлению: "Вышивание"</div>
+    </div>
+
+    <main id='main'>
+      <div class="left-line">
+        <a href="../index.html"><div class="button" style="background-image: url('../sistem_image/logo_foot.jpg')"></div><p>Главное меню</p></a>
+        <a href="foxs hole-obzore.html"><div class="button" style="background-image: url('../sistem_image/fox_hole_but.png')"></div><p>Лисья нора</p></a>
+        <a href="lessons.html"><div class="button" style="background-image: url('../sistem_image/less2_but.png')"></div><p>Уроки</p></a>
+        <a href="I want to will have new idea.html"><div class="button" style="background-image: url('../sistem_image/rand_but.png')"></div><p>Ищу идею</p></a>
+      </div>
+      <div class="work_zone">
+        <div id='spisok_razd-obs'>
+          <a class="button" style="background-image: url('../sistem_image/graffika.png')" href="foxs hole-graffika.html"></a>
+          <a class="button" style="background-image: url('../sistem_image/Embroidery.png')" href="foxs hole-Embroidery.html"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+          <a class="button" style="background-image: url('../sistem_image/dot.png')"></a>
+        </div>
+    </main>
+
+    <footer class="grid_blocks">
+      <a class="button" style="background-image: url('../sistem_image/VK.png')" href="https://vk.com/public164057070"></a>
+      <a class="button" style="background-image: url('../sistem_image/you.png')" href="https://www.youtube.com/channel/UCM-0ikAGd_lXMmQkl4qFVjw"></a>
+      <img class='sist_i' src="../sistem_image/logo_foot.jpg" alt="logo" width="120">
+    </footer>
+    <script>
+
+      body.getElementsByTagName('header')[0].children[1].getElementsByClassName('Notification')[0].textContent = body.getElementsByClassName('Noti_menu')[0].children.length
+
+      function noti_menu(event){
+        var tar=event.target.parentElement.parentElement.parentElement
+        var tar_child=tar.getElementsByClassName('Noti_menu')[0]
+
+        if (tar_child.style.visibility!='hidden'){
+          tar_child.style.transform='scaleY(0.000001)'
+          tar_child.style.visibility='hidden'
+          event.target.getElementsByClassName('Notification')[0].style.display='none'
+        }
+        else{
+          tar_child.style.visibility='visible'
+          tar_child.style.transform='scaleY(1)'
+        }
+      }
+
+    </script>
+  </body>
+</html>

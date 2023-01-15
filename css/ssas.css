@@ -1,0 +1,313 @@
+@charset "UTF-8";
+@keyframes ani-down-up {
+  50% {
+    top: 10px; } }
+@keyframes ani-down-up-rev {
+  50% {
+    top: -10px; } }
+@font-face {
+  font-family: 'Laptev_Brush';
+  src: url("laptev/Laptev_Brush.otf"); }
+@font-face {
+  font-family: 'fairy';
+  src: url("FairyMuffinRoundPop/Fairymuffinroundpop.ttf"); }
+@media (max-width: 1214px) {
+  #body .grid-nine {
+    grid-template-columns: repeat(11, 1fr); }
+    #body .grid-nine .button:first-child {
+      display: none; }
+    #body .grid-nine .button:last-child {
+      display: none; } }
+@media (max-width: 1072px) {
+  #body .grid-nine {
+    grid-template-columns: repeat(9, 1fr); }
+    #body .grid-nine .button:nth-child(2) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(2) {
+      display: none; } }
+@media (max-width: 1106px) {
+  #body .Noti_menu {
+    grid-template-columns: repeat(10, 1fr); }
+    #body .Noti_menu div {
+      font-size: 1.9vw; } }
+@media (max-width: 932px) {
+  #body main {
+    font-size: 3vw; }
+  #body .I_want_to_tall {
+    font-size: 2.3vw; }
+  #body .hole, #body .lesses {
+    width: 30%; }
+  #body .idia {
+    width: 35%; } }
+@media (max-width: 888px) {
+  #body .grid-nine {
+    grid-template-columns: repeat(7, 1fr); }
+    #body .grid-nine .button:nth-child(3) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(3) {
+      display: none; } }
+@media (max-width: 854px) {
+  #body .Noti_menu {
+    grid-template-columns: repeat(8, 1fr); }
+    #body .Noti_menu div {
+      font-size: 2.5vw; }
+  #body .razd_line {
+    padding-bottom: 15px; }
+    #body .razd_line a {
+      display: none; }
+    #body .razd_line .littl_wind {
+      display: block; } }
+@media (max-width: 715px) {
+  #body .Noti_menu {
+    grid-template-columns: repeat(6, 1fr); }
+    #body .Noti_menu div {
+      font-size: 3vw; }
+  #body .grid-nine {
+    grid-template-columns: repeat(5, 1fr); }
+    #body .grid-nine .button:nth-child(4) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(4) {
+      display: none; } }
+@media (max-width: 634px) {
+  #body footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0; }
+    #body footer a {
+      margin-right: 10px; } }
+@media (max-width: 567px) {
+  #body main {
+    font-size: 4.5vw; }
+  #body .I_want_to_tall {
+    font-size: 3.5vw; }
+  #body .hole, #body .idia {
+    width: 55%; }
+  #body .lesses {
+    display: none; } }
+@media (max-width: 540px) {
+  #body #spisok_razd {
+    grid-template-columns: repeat(4, 1fr); }
+  #body .Noti_menu {
+    grid-template-columns: repeat(4, 1fr); }
+    #body .Noti_menu div {
+      font-size: 4vw; }
+  #body .grid-nine {
+    grid-template-columns: repeat(4, 1fr); }
+    #body .grid-nine .button:nth-last-child(5) {
+      display: none; } }
+@media (max-device-width: 480px) {
+  #body footer {
+    grid-template-columns: repeat(4, 1fr); }
+    #body footer img {
+      width: 200px; }
+  #body header {
+    grid-template-columns: repeat(4, 1fr); }
+    #body header img {
+      grid-column: 1/3;
+      width: 200px; }
+    #body header .Notification {
+      width: 60px;
+      height: 60px;
+      font-size: 40pt;
+      margin-left: 80px; }
+    #body header .lk {
+      height: 140px;
+      font-size: 95pt; }
+  #body .Noti_menu {
+    grid-template-columns: repeat(4, 1fr);
+    height: 500px; }
+    #body .Noti_menu div {
+      height: 460px;
+      margin-bottom: 30px;
+      font-size: 5vw; }
+  #body .button {
+    height: 150px;
+    width: 150px; }
+  #body main {
+    font-size: 4.5vw; }
+  #body .grid-nine {
+    height: 150px;
+    grid-template-columns: repeat(4, 1fr); }
+    #body .grid-nine .button:first-child {
+      display: none; }
+    #body .grid-nine .button:last-child {
+      display: none; }
+    #body .grid-nine .button:nth-child(2) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(2) {
+      display: none; }
+    #body .grid-nine .button:nth-child(3) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(3) {
+      display: none; }
+    #body .grid-nine .button:nth-child(4) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(4) {
+      display: none; }
+    #body .grid-nine .button:nth-last-child(5) {
+      display: none; }
+  #body .I_want_to_tall {
+    font-size: 2vw; }
+  #body .hole, #body .idia {
+    width: 100%;
+    margin-bottom: 20px; }
+  #body .lesses {
+    display: none; }
+  #body .razd_line {
+    height: 150px;
+    padding-bottom: 15px; }
+    #body .razd_line a {
+      display: none; }
+    #body .razd_line .littl_wind {
+      display: block; } }
+body {
+  margin: 0;
+  font-family: 'Laptev_Brush';
+  font-weight: 30pt; }
+
+.grid_blocks {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-column-gap: 20px; }
+
+header {
+  background-color: #f2dfcf; }
+  header img {
+    grid-column: 1/11; }
+  header .button {
+    box-shadow: -4px 4px 10px 0px #83664c;
+    margin-top: 15px; }
+  header .button:hover {
+    box-shadow: inset -2px 4px 5px 0px #ffffff, -4px 4px 10px 0px #83664c; }
+  header .lk {
+    height: 60px;
+    font-size: 40pt; }
+
+footer {
+  background-color: #83664c; }
+  footer img {
+    grid-column: 12/13; }
+  footer .button {
+    box-shadow: -4px 4px 10px 0px #f2dfcf;
+    margin-top: 20px; }
+  footer .button:hover {
+    box-shadow: inset -2px 4px 5px 0px #ffffff, -4px 4px 10px 0px #f2dfcf; }
+
+.Noti_menu {
+  height: 220px;
+  background: linear-gradient(to right, #c0a388 20%, #f2dfcf 80%);
+  border-bottom: 2px solid #83664c;
+  z-Index: 1;
+  position: absolute;
+  overflow-x: auto;
+  transition-duration: 0.5s;
+  transform-origin: top; }
+  .Noti_menu div {
+    grid-column-end: span 2;
+    font-size: 1.5vw;
+    font-family: 'Laptev_Brush';
+    border: 2px solid #83664c;
+    border-radius: 5px;
+    height: 200px;
+    box-shadow: -4px 4px 10px 0px #83664c;
+    padding: 6px;
+    margin-bottom: 10px; }
+
+.razd_line {
+  background: linear-gradient(to right, #c0a388 20%, #f2dfcf 80%);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-column-gap: 20px;
+  justify-items: center;
+  padding-top: 20px;
+  height: 70px; }
+  .razd_line a {
+    grid-column: span 4;
+    font-family: 'fairy';
+    text-decoration: none;
+    font-size: 30pt;
+    color: #83664c; }
+  .razd_line a:hover {
+    text-shadow: 2px 5px 4px #1b4a4b; }
+
+main {
+  background: radial-gradient(at top, #FEFFFF, #daf5ff);
+  font-size: 2vw;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  color: #1b4a4b; }
+
+.grid-nine {
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-column-gap: 20px;
+  background-color: #69a7a7;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  justify-items: center; }
+  .grid-nine .button:hover {
+    z-index: 1; }
+
+.I_want_to_tall {
+  font-family: 'fairy';
+  grid-column: 1/11;
+  margin-bottom: 10px;
+  font-size: 1.6vw; }
+
+.button {
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  background-color: #1b4a4b;
+  background-size: cover;
+  font-family: "fairy";
+  color: #e2fbff;
+  text-align: center;
+  text-decoration: none; }
+
+.button:hover {
+  box-shadow: inset -2px 4px 5px 0px #ffffff; }
+
+.littl_wind {
+  display: none; }
+
+.littl_wind:hover {
+  box-shadow: -2px 4px 2px 0px #1b4a4b; }
+
+.Notification {
+  /*пришедшее уведомление*/
+  font-family: 'Laptev_Brush';
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  width: 18px;
+  height: 18px;
+  background-color: #1b4a4b;
+  margin-left: 43px;
+  margin-top: 10px;
+  box-shadow: -4px 4px 10px 0px #83664c; }
+
+.main-im {
+  border-radius: 20px;
+  margin: 0; }
+
+.hole {
+  width: 20%; }
+
+.lesses {
+  margin-right: 4%;
+  width: 15%; }
+
+.idia {
+  width: 28%; }
+
+hr {
+  height: 4px;
+  background-color: #83664c; }
+
+/*# sourceMappingURL=ssas.css.map */

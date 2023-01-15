@@ -1,0 +1,538 @@
+@keyframes ani-down-up{
+  50%{top:10px}
+}
+@keyframes ani-down-up-rev{
+  50%{top:-10px}
+}
+
+@font-face{
+  font-family: 'Laptev_Brush';
+  src: url('laptev/Laptev_Brush.otf');
+}
+@font-face {
+  font-family: 'fairy';
+  src: url('FairyMuffinRoundPop/Fairymuffinroundpop.ttf');
+}
+@media (max-width: 1214px){
+  #body{
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(7, 1fr)}
+    .comments{p{background-size: 30px;}}
+  }
+}
+@media (max-width: 1192px){
+  #body{
+    .left-line{grid-column: 1/2; padding-left: 6px; padding-right: 6px;
+      p{display: none;}
+      a{grid-template-columns: 100%;}
+    }
+    .work_zone{grid-column: 2/14;}
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(8, 1fr)}
+  }
+}
+@media (max-width: 1106px){
+  #body{
+    .Noti_menu{
+      grid-template-columns: repeat(10, 1fr);
+      div{font-size:1.9vw}
+    }
+    .comments{p{font-size: 1.6vw}}
+  }
+}
+@media (max-width: 1046px){
+  #body{
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(7, 1fr)}
+    .pole_vvoda{grid-template-columns: repeat(8, 1fr);
+      #text_maseje{grid-column: 2/8}
+    }
+  }
+}
+@media (max-width: 1005px){
+  #body{
+    .dow{background-image: url('../sistem_image/but_down_little_wind.png');}
+    .up{background-image: url('../sistem_image/but_up_little_wind.png');}
+  }
+}
+@media (max-width: 948px){
+  #body{
+    .comments{p{font-size: 1.8vw}}
+    li, ul{font-size: 3.4vw}
+    .move_lessons{p{font-size: 3.5vw}}
+  }
+}
+@media (max-width: 932px){
+  #body{
+    .lovers{grid-template-columns: repeat(3, 1fr)}
+    .lk_a, .blok_ld{font-size: 3.3vw;}
+    .I_want_to_tall{font-size: 2.5vw}
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(6, 1fr)}
+    .pole_vvoda{grid-template-columns: repeat(7, 1fr);
+      #text_maseje{grid-column: 2/7}
+    }
+  }
+}
+@media (max-width: 854px){
+  #body{
+    .Noti_menu{
+      grid-template-columns: repeat(8, 1fr);
+      div{font-size:2.5vw}
+    }
+    .move_lessons{margin-left: -5%; img{width: 120px} .buggi{width: 100%}}
+  }
+}
+@media (max-width: 818px){
+  #body{
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(5, 1fr)}
+    .pole_vvoda{grid-template-columns: repeat(6, 1fr);
+      #text_maseje{grid-column: 2/6}
+    }
+    select{font-size: 2.5vw} #itog_rnd, button{font-size: 3vw}
+  }
+}
+@media (max-width: 730px){#body{.comments{p{background-size: 25px;}}}}
+@media (max-width: 725px){
+  #body{
+    #gallery{.ssilka{font-size: 2.5vw} a{font-size: 3.4vw}}
+    main{grid-template-columns: repeat(12, 1fr); padding-right: 0; grid-column-gap:0;}
+    .left-line{
+      grid-column: 1/13; padding-bottom: 10px; padding-left: 50px; padding-right: 50px;
+      display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 20px;
+      a{justify-items:center}
+    }
+    .work_zone{grid-column: 1/13; grid-column-gap: 0; grid-template-columns: repeat(4, 1fr); padding-left: 50px; padding-right: 50px;}
+    .dow{display: none;} .up{display: none;}
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(6, 1fr); overflow-y: auto;}
+    #Who, #What_do{grid-column: 1/3; margin-right: 5px} #What_color,#Where{grid-column: 3/5; margin-left: 5px} #itog_rnd, button{grid-column: 1/5; font-size: 4vw} select{font-size: 3.3vw}
+  }
+}
+@media (max-width: 715px){
+  #body{
+    .i_tall_you{font-size: 3vw}
+    .lovers{grid-template-columns: repeat(2, 1fr)}
+    .Noti_menu{grid-template-columns: repeat(6, 1fr);
+    div{font-size:3vw}
+  }
+}
+}
+@media (max-width: 634px){
+  #body{
+    .lk_a, .blok_ld{font-size: 4.5vw;} .name,.regestration{grid-column: 1/11} .regestration{margin-top: 20px}
+    #gallery{.mine, .your{width: 100%;} height: 500px; .ssilka{font-size: 3.5vw}}
+    .comments{p{font-size: 2.5vw}}
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(5, 1fr)}
+    .pole_vvoda{grid-template-columns: repeat(5, 1fr);
+      #text_maseje{grid-column: 2/5}
+    }
+    footer{grid-template-columns: repeat(3, 1fr); grid-column-gap: 0;
+      a{margin-right: 10px}
+    }
+  }
+}
+@media (max-width: 540px){
+  #body{
+    .lovers{height: 200px}
+    #spisok_razd, #spisok_razd-obs{grid-template-columns: repeat(4, 1fr)}
+    .Noti_menu{
+      grid-template-columns: repeat(4, 1fr);
+      div{font-size:4vw}
+    }
+    .pole_vvoda{grid-template-columns: repeat(4, 1fr); height:45px;
+      #text_maseje{grid-column: 2/4}
+    }
+    .move_lessons{p{font-size: 6vw} .I_want_to_tall{font-size: 4vw}}
+    li,ul{font-size:6vw}
+  }
+}
+
+@media (max-device-width: 480px){
+  #body{
+    .i_tall_you{font-size: 3.6vw}
+    .move_lessons{padding-top: 85px; margin-left: -2%; p{font-size: 6vw} .I_want_to_tall{font-size: 4vw}}
+    li,ul{font-size:6vw} .razw{height: 1600px}
+    .blok_ld{grid-template-columns: repeat(4, 1fr); grid-column-gap: 0}
+    .lk_a, .blok_ld{font-size: 6vw;} .name,.regestration{grid-column: 1/5} .regestration{margin-top: 20px; font-size: 5.4vw;}
+    .lovers{grid-template-columns: repeat(2, 1fr); height: 550px}
+    footer{grid-template-columns: repeat(4, 1fr); img{width: 200px}}
+    header{
+      grid-template-columns: repeat(4, 1fr);
+      img{grid-column: 1/3; width: 200px}
+      .Notification{width: 60px; height: 60px; font-size: 40pt; margin-left: 80px}
+      .lk{height:140px; font-size: 95pt}
+    }
+    .Noti_menu{div{height:460px; margin-bottom: 30px; font-size: 5vw;} grid-template-columns: repeat(4, 1fr); height: 500px}
+    .false_line{padding: 18px}
+    .button{height: 150px; width: 150px;}
+    #gallery{a{font-size: 3.4vw}}
+    main{grid-template-columns: repeat(12, 1fr); padding-right: 0; grid-column-gap:0;}
+    .left-line{
+      grid-column: 1/13; padding-bottom: 10px; padding-left: 50px; padding-right: 50px;
+      display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 20px; height: 160px;
+      a{justify-items:center}
+    }
+    .work_zone{grid-column: 1/13; grid-column-gap: 0; grid-template-columns: repeat(4, 1fr); padding-left: 50px; padding-right: 50px;}
+    #gallery{
+      .your, .mine{a{font-size: 4.5vw} .ssilka{font-size: 4vw} width: 100%}
+      .comments{p{font-size: 4vw; background-size: 65px; text-indent: 70px}}
+      height: 1350px;
+    }
+    .pole_vvoda{#text_maseje{grid-column: 2/4; font-size: 60pt}grid-template-columns: repeat(4, 1fr); height: 130px; grid-column-gap: 0;}
+    .dow{display: none;} .up{display: none;}
+    #spisok_razd{grid-template-columns: repeat(5, 1fr); overflow-y: auto; height: 150px;}
+    #spisok_razd-obs{height: 1700px; grid-template-columns: repeat(5, 1fr); overflow-y: auto;}
+    .I_want_to_tall{font-size: 1.5vw}
+    .dis_bl{input{font-size: 40pt}height: 90px;}
+    #Who, #What_do{grid-column: 1/3; margin-right: 5px} #What_color,#Where{grid-column: 3/5; margin-left: 5px} #itog_rnd, button{grid-column: 1/5; font-size: 5vw; height: 230px} select{font-size: 3.5vw; height: 90px}
+    #itog_rnd{padding-top: 50px} option{width: 250px; font-size: 2vw} button{margin-bottom: 500px}
+  }
+}
+
+$blue: #69a7a7;
+$orange: #C2A388;
+$light-blue: #e2fbff;
+$light-orange: #f2dfcf;
+$dark-blue: #1b4a4b;
+$dark-orange: #83664c;
+
+body{
+  margin: 0;
+  font-family: 'Laptev_Brush';
+  font-weight: 30pt;
+}
+.grid_blocks{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-column-gap: 20px;
+}
+
+header{
+  background-color: $light-orange;
+  img{grid-column: 1/11;}
+  .button{box-shadow: -4px 4px 10px 0px $dark-orange; margin-top:15px;}
+  .button:hover{box-shadow: inset -2px 4px 5px 0px #ffffff, -4px 4px 10px 0px $dark-orange;}
+  .lk{height:60px; font-size: 40pt}
+}
+
+footer{
+  background-color: $dark-orange;
+  img{grid-column: 12/13;}
+  .button{box-shadow: -4px 4px 10px 0px $light-orange;margin-top:20px;}
+  .button:hover{box-shadow: inset -2px 4px 5px 0px #ffffff, -4px 4px 10px 0px $light-orange;}
+}
+
+.Noti_menu{
+  height: 220px;
+  background: linear-gradient(to right, #c0a388 20%, #f2dfcf 80%);
+  border-bottom: 2px solid $dark-orange;
+  z-Index: 1;
+  position: absolute;
+  overflow-x: auto;
+  transition-duration: 0.5s;
+  transform-origin:top;
+  div{
+    grid-column-end: span 2;
+    font-size: 1.5vw;
+    font-family: 'Laptev_Brush';
+    border: 2px solid $dark-orange;
+    border-radius: 5px;
+    height: 200px;
+    box-shadow: -4px 4px 10px 0px $dark-orange;
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+}
+
+.false_line{padding: 10px; background: linear-gradient(to right, #c0a388 20%, #f2dfcf 80%);}
+
+main{
+  background: radial-gradient(at top, #FEFFFF, #daf5ff);
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  padding-right: 50px;
+  grid-column-gap: 20px;
+}
+
+.left-line{
+  grid-column: 1/4;
+  background-color: $orange;
+  a{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:20px;
+    height:70px;
+    font-family: 'fairy';
+    text-decoration: none;
+    font-size: 16pt;
+    p{
+      padding-top: 2px;
+      grid-column: 2/4;
+      color: $dark-orange;
+      text-align: center;
+    }
+  }
+  a:hover{
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px $dark-orange;
+    text-shadow: 1px 2px 4px #ffffff;
+    .button{box-shadow: inset -2px 4px 5px 0px #ffffff}
+  }
+}
+
+.work_zone{
+  font-family: 'fairy';
+  grid-column: 4/14;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 20px;
+  padding-top: 50px;
+  font-size: 30pt;
+  color: $dark-blue;
+}
+
+#spisok_razd,#spisok_razd-obs{
+  height: 70px;
+  grid-column: 1/9;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-column-gap: 20px;
+  background-color: $blue;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-radius:30px;
+  margin-bottom: 20px;
+  justify-items: center;
+  .button:hover{z-index: 1;}
+}
+#spisok_razd-obs{height:1200px; grid-column: 1/13}
+
+.button{
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  background-color: $dark-blue;
+  background-size: cover;
+  font-family: "fairy";
+  color: $light-blue;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover{
+  box-shadow: inset -2px 4px 5px 0px #ffffff;
+}
+
+.active{background-color:$dark-orange;}
+
+.Notification{ /*пришедшее уведомление*/
+  font-family: 'Laptev_Brush';
+  border-radius: 100%;
+  text-align: center;
+  color: white;
+  width: 18px;
+  height: 18px;
+  background-color: $dark-blue;
+  margin-left: 43px;
+  margin-top: 10px;
+  box-shadow: -4px 4px 10px 0px $dark-orange;
+}
+
+.dow{background-image: url('../sistem_image/but_down.png')}
+.up{background-image: url('../sistem_image/but_up.png')}
+.up, .dow{
+  position: relative;
+  top:0;
+  height: 75px;
+  background-size: cover;
+}
+.up:hover, .dow:hover{
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.dow:hover{animation-name: ani-down-up}
+.up:hover{animation-name: ani-down-up-rev}
+
+/*Рабочая зона. общее*/
+/*Личный кабинет*/
+.blok_ld{font-size: 2.5vw; grid-column: 1/11; display: grid; grid-template-columns: repeat(10, 1fr); grid-column-gap: 20px; border-top: 5px solid $dark-orange; border-bottom: 5px solid $dark-orange; padding-top: 20px; padding-bottom: 20px;
+  .name{grid-column: 1/5} .regestration{grid-column: 5/11}
+}
+.lk_a{grid-column: 1/11; margin-bottom: 0; margin-top: 50px; font-size: 2.5vw}
+.lovers{padding: 10px; grid-column: 1/11; display: grid; grid-template-columns: repeat(4, 1fr); overflow-y: auto; grid-gap: 10px; height: 250px; border: 2px solid $dark-orange; border-radius: 20px; margin-top: 10px; margin-bottom: 40px; align-items: center; background-color: $light-orange;
+  .img_pst{background-repeat: no-repeat; background-size: contain; vertical-align: middle; border: 2px solid $orange; border-radius: 4px; img{margin:0; width:100%; visibility: hidden;}}
+}
+
+/*Ищу идею*/
+select{grid-column-end: span 5; margin-bottom: 20px; height: 50px; font-family: 'fairy'; font-size: 1.5vw; border-radius: 10px; color: $dark-orange} #Who,#Where{margin-top: 50px}
+#itog_rnd{grid-column: 1/11; height: 80px; margin-bottom: 40px; text-align: center; padding-top: 30px; font-size: 2vw; border-top: 5px solid $dark-orange; border-bottom: 5px solid $dark-orange;}
+button{grid-column: 2/10; height: 80px; margin-bottom: 60px; border-radius: 20px; background-color: $blue; border: 2px solid $dark-blue;font-family: 'fairy'; font-size: 1.8vw; color: $dark-blue}
+button:hover{box-shadow: inset -2px 4px 5px 0px #ffffff, inset 2px -4px 5px 0px $dark-blue}
+option{background-color: $light-orange; font-family: 'Laptev_Brush'; color: $dark-orange}
+.i_tall_you{grid-column: 1/11; font-size: 1.8vw; margin-bottom: 20px}
+
+/*Уроки*/
+.razw{grid-column: 1/11; height: 1100px; color: $dark-orange; text-align: center;li{color: $dark-blue; text-align: left}}
+ul{list-style: none;}
+li, ul{margin: 10px; font-size: 2.5vw}
+.zero:hover{.one{text-shadow: none} .one:hover{text-shadow: 2px 2px 4px $blue;cursor: pointer;} text-shadow: 2px 2px 4px $blue;cursor: pointer;}
+
+.move_lessons{
+  position: fixed;
+  top: 0;
+  left: 16%;
+  z-index: 1;
+  overflow-y: auto;
+  border:2px solid $dark-blue;
+  background-color: $light-orange;
+  width: 70%;
+  height: 92%;
+  box-shadow: 0px 0px 1500px 80px #1b4a4b;
+  padding: 30px;
+  transition-duration: 0.5s;
+  transform-origin:top;
+  p,a{margin-top: 80px; color: $dark-orange; font-family: 'Laptev_Brush'; text-shadow: none}
+  p{ font-size: 2.5vw}
+
+  img{width: 185px; border-radius: 20px;}
+  .lefti{float: right;} .righti{float:left; margin-right: 10px;}
+  .I_want_to_tall{font-family: 'fairy'; margin-left: 10px;}
+  .buggi{width: 100%} .finish{width: 50%; margin-left: 20%}
+}
+#less_back{position: fixed; z-index: 3; left: 17%; top: 20px; background-color: $dark-orange; background-image: url('../sistem_image/exit.png');}
+
+hr {height: 4px; background-color: #83664c;}
+
+/*Лисья нора*/
+#gallery{
+  height: 600px;
+  overflow-y: auto;
+  border: 4px solid $blue;
+  grid-column: 1/11;
+  padding-bottom:5px;
+  border-top-left-radius: 10px; border-top-right-radius: 10px;
+  .mine, .your{
+    background-color: white;
+    width: 40%;
+    margin-top: 10px;
+    border: 2px solid $blue;
+    border-radius: 5px;
+    padding-bottom: 0;
+    font-size: 2vw;
+    max-width:60%;
+  }
+}
+.pole_vvoda{
+  height: 60px;
+  grid-column: 1/11;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 20px;
+  border: 4px solid $blue; border-top: none;
+  background-color: white;
+  div:hover{box-shadow: inset 2px -4px 5px 0 $dark-blue, inset -2px 4px 5px 0 white;}
+  div{border-left: 2px solid $blue; border-right: 2px solid $blue}
+  input{
+    font-family: 'fairy';
+    border: none;
+    border-left: 2px solid $blue;
+    border-right: 2px solid $blue;
+    grid-column: 2/10;
+    font-size: 25pt;
+    color: $dark-blue;
+  }
+}
+.I_want_to_tall{
+  grid-column:1/11;
+  margin-bottom:10px;
+  font-size: 1.6vw;
+}
+.mine{
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  a{grid-column: 1/4}
+  .ssilka{grid-column: 1/5}
+  .delited{grid-column-end: 5;}
+  .comments, .img_pst{
+    grid-column: 1/5;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.your{
+  padding: 10px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  a{grid-column: 1/5}
+  .img_pst{
+    grid-column: 1/5;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .dis_bl{grid-column: 1/5; display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 20px; height: 60px;
+    input{grid-column: 1/4; font-size: 25pt; font-family: 'fairy'; color: $dark-blue; border: 2px solid $blue}
+  }
+}
+
+.comments{
+  margin-bottom: 10px;
+  max-height: 130px;
+  overflow-y: auto;
+  border: 2px solid #83664c;
+  background-color: #f2dfcf;
+  padding-left: 7px;
+  p{
+    background-image: url('../sistem_image/coment_logo.png');
+    background-size: 35px;
+    background-repeat: no-repeat;
+    padding-top:10px;
+    margin-bottom: 5px;
+    font-size: 1.3vw;
+    text-indent: 38px;
+    border-bottom: 2px solid #C2A388;
+    padding-bottom:3px;
+  }
+}
+
+.ssilka{
+  color: $dark-blue;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid $dark-blue;
+  background-color: $light-blue;
+}
+.ssilka:hover{box-shadow: inset 2px -4px 5px 0 $dark-blue, inset -2px 4px 5px 0 white;}
+
+.dise_vvod{
+  border: 2px solid #69a7a7;
+  background-size: cover;
+}
+
+.dislike{border: 2px solid $dark-orange; background-color:$orange; background-image: url('../sistem_image/dislike.png')}
+.like{border: 2px solid $blue; background-image: url('../sistem_image/like.png')}
+.delited{
+  background-color: $light-orange;
+  background-image: url('../sistem_image/box.png');
+  border: 2px solid $orange;
+  background-size: cover;
+}
+#your_files{
+  display: none;
+}
+
+.like-dis_block{
+  display: grid;
+  grid-template-columns: auto auto;
+  position:relative;
+  bottom: 20px;
+  justify-content:right;
+  grid-gap:3%;
+}
+
+#spisok_razd::-webkit-scrollbar, .lovers::-webkit-scrollbar, #gallery::-webkit-scrollbar, .move_lessons::-webkit-scrollbar, .comments::-webkit-scrollbar, .Noti_menu::-webkit-scrollbar{width: 0}

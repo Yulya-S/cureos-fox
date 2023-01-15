@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/other_ssas.css">
+    <title>Ищу идею</title>
+  </head>
+  <body id="body">
+    <header class='grid_blocks'>
+      <img class='sist_i' src="../sistem_image/logo_head.jpg" alt="logo" width="120">
+      <div class="button" onclick="noti_menu(event)" style="background-color: #C2A388; background-image: url('../sistem_image/Bell.png')"><a class="Notification" style='display: block'></a></div>
+      <a class="button lk" href="My_lk.html" style="padding-top:10px;">Ю</a>
+    </header>
+    <div class='false_line'></div>
+    <div class="grid_blocks Noti_menu" style='visibility: hidden; transform: scaleY(0.000001);'>
+      <div>В этом обновлении вам добавились все возможности по направлению: "Графика"</div>
+      <div>В этом обновлении вам добавилась "Лисья нора" по направлению: "Вышивание"</div>
+    </div>
+
+    <main>
+      <div class="left-line">
+        <a href="../index.html"><div class="button" style="background-image: url('../sistem_image/logo_foot.jpg')"></div><p>Главное меню</p></a>
+        <a href="foxs hole-obzore.html"><div class="button" style="background-image: url('../sistem_image/fox_hole_but.png')"></div><p>Лисья нора</p></a>
+        <a href="lessons.html"><div class="button" style="background-image: url('../sistem_image/less2_but.png')"></div><p>Уроки</p></a>
+        <a href="I want to will have new idea.html"><div class="button" style="background-image: url('../sistem_image/rand_but.png')"></div><p>Ищу идею</p></a>
+      </div>
+      <div class="work_zone">
+        <a class='i_tall_you'>Добро пожаловать на вкладку "Ищу идею", сейчас ты можешь нажать на кнопку "Сгенерировать идею" и мы предложим тебе идею для рисунка, если ты знаешь какой-то из критериев просто заблокируй его и программа сгенерирует только оставшееся</a>
+        <div id='spisok_razd'>
+          <a class="button active" style="background-image: url('../sistem_image/graffika.png')" href="lessons.html"></a>
+        </div>
+        <div onclick="spisok_razd.scrollBy(0,75.5)" class="dow"></div>
+        <div onclick="spisok_razd.scrollBy(0,-75.5)" class="up"></div>
+
+        <select id='Who'>
+          <option value="none">Кто?</option>
+          <option value="Эльф ">Эльф</option>
+          <option value="Инопланетянин ">Инопланетянин</option>
+          <option value="Король/Королева ">Король/королева</option>
+          <option value="Студент/Школьник ">Студент/школьник</option>
+        </select>
+        <select id='Where'>
+          <option value="none">Где?</option>
+          <option value="в лесу ">Лес</option>
+          <option value="в замке ">Замок</option>
+          <option value="в школе ">Школа</option>
+          <option value="в городе ">Город</option>
+          <option value="на космическом корабле ">Космический корабль</option>
+        </select>
+        <select id='What_do'>
+          <option value="none">Что делает?</option>
+          <option value="играет в игры, ">Играет в игры</option>
+          <option value="играет на инструментах, ">Играет на инструментах</option>
+          <option value="рисует, ">Рисует</option>
+          <option value="открыл свой магазин, ">Открыл свой магазин</option>
+          <option value="бегает, ">Бегает</option>
+          <option value="дерётся, ">Дерётся</option>
+        </select>
+        <select id='What_color'>
+          <option value="none">В каких оттенках?</option>
+          <option value="в чёрно-белых ">Чёрно-Белых</option>
+          <option value="в красных ">Красных</option>
+          <option value="в зелёных ">Зелёных</option>
+          <option value="в синих ">Синих</option>
+        </select>
+
+        <a id='itog_rnd'> Кто? Где? Что делает? В каких оттенках?</a>
+
+        <button onclick="rnd()">Сгенерировать идею</button>
+      </div>
+    </main>
+
+    <footer class="grid_blocks">
+      <a class="button" style="background-image: url('../sistem_image/VK.png')" href="https://vk.com/public164057070"></a>
+      <a class="button" style="background-image: url('../sistem_image/you.png')" href="https://www.youtube.com/channel/UCM-0ikAGd_lXMmQkl4qFVjw"></a>
+      <img class='sist_i' src="../sistem_image/logo_foot.jpg" alt="logo" width="120">
+    </footer>
+    <script>
+
+      body.getElementsByTagName('header')[0].children[1].getElementsByClassName('Notification')[0].textContent = body.getElementsByClassName('Noti_menu')[0].children.length
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        itog_rnd.parentElement.getElementsByTagName('button')[0].style.marginBottom=window.screen.height-400+'px'
+      }
+
+      function noti_menu(event){
+        var tar=event.target.parentElement.parentElement.parentElement
+        var tar_child=tar.getElementsByClassName('Noti_menu')[0]
+
+        if (tar_child.style.visibility!='hidden'){
+          tar_child.style.transform='scaleY(0.000001)'
+          tar_child.style.visibility='hidden'
+          event.target.getElementsByClassName('Notification')[0].style.display='none'
+        }
+        else{
+          tar_child.style.visibility='visible'
+          tar_child.style.transform='scaleY(1)'
+        }
+      }
+
+      function rnd(){
+        if ((Who.value!='none')&&(Where.value!='none')&&(What_do.value!='none')&&(What_color.value!='none')){
+          alert('Хм, похоже, вы знаете, что хотите сделать')
+          return
+        }
+
+        var stroka=''
+        var rand
+        if (Who.value=='none'){
+          rand=Math.floor(Math.random() * 4)
+          switch (rand) {
+            case 0: stroka=stroka+'Эльф '
+              break;
+            case 1: stroka=stroka+'Инопланетянин '
+              break;
+            case 2: stroka=stroka+'Король/Королева '
+              break;
+            case 3: stroka=stroka+'Студент/Школьник '
+              break;
+          }
+        }
+        else {stroka=stroka+Who.value}
+
+        if (Where.value=='none'){
+          rand=Math.floor(Math.random() * 5)
+          switch (rand) {
+            case 0: stroka=stroka+'в лесу '
+              break;
+            case 1: stroka=stroka+'в замке '
+              break;
+            case 2: stroka=stroka+'в школе '
+              break;
+            case 3: stroka=stroka+'в городе '
+              break;
+            case 4: stroka=stroka+'на космическом корабле '
+              break;
+          }
+        }
+        else {stroka=stroka+Where.value}
+
+        if (What_do.value=='none'){
+          rand=Math.floor(Math.random() * 6)
+          switch (rand) {
+            case 0: stroka=stroka+'играет в игры, '
+              break;
+            case 1: stroka=stroka+'играет на инструментах, '
+              break;
+            case 2: stroka=stroka+'рисует, '
+              break;
+            case 3: stroka=stroka+'открыл свой магазин, '
+              break;
+            case 4: stroka=stroka+'бегает, '
+              break;
+            case 5: stroka=stroka+'дерётся, '
+              break;
+          }
+        }
+        else {stroka=stroka+What_do.value}
+        stroka=stroka+'нарисуй это '
+        if (What_color.value=='none'){
+          rand=Math.floor(Math.random() * 4)
+          switch (rand) {
+            case 0: stroka=stroka+'в чёрно-белых '
+              break;
+            case 1: stroka=stroka+'в красных '
+              break;
+            case 2: stroka=stroka+'в зелёных '
+              break;
+            case 3: stroka=stroka+'в синих '
+              break;
+          }
+        }
+        else {stroka=stroka+What_color.value}
+        stroka=stroka+'тонах, удачи)'
+
+        itog_rnd.textContent=stroka
+      }
+    </script>
+  </body>
+</html>
